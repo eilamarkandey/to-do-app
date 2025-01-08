@@ -57,11 +57,23 @@ To get started with the To-Do App, follow these steps:
     ```
 
 ## Running the Application
-To run the application locally, use the following command:
-```bash
-npm start
-```
-This will start the development server and you can view the app in your browser at `http://localhost:3000`.
+To run the application locally, follow these steps:
+
+1. Start the server:
+    ```bash
+    node server.js
+    ```
+2. Open a new terminal and navigate to the client directory:
+    ```bash
+    cd client
+    ```
+3. Start the client:
+    ```bash
+    npm start
+    ```
+
+This will start the development server and you can view the app in your browser at [http://localhost:3000](http://localhost:3000).
+
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
