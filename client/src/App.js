@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { FaTrash, FaEdit, FaSave, FaTimes } from 'react-icons/fa';
-import './App.css'; // Import the CSS file
+import axios from 'axios'; // Importing axios for making HTTP requests
+import { FaTrash, FaEdit, FaSave, FaTimes } from 'react-icons/fa'; // Importing icons from react-icons
+import './App.css'; // Importing the CSS file for styling
 
 const App = () => {
+  // State variables for managing tasks and form inputs
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState({ title: '', description: '', status: 'Pending' });
   const [searchQuery, setSearchQuery] = useState('');
@@ -11,9 +12,9 @@ const App = () => {
   const [editingTaskId, setEditingTaskId] = useState(null);
   const [editingTask, setEditingTask] = useState({ title: '', description: '', status: '' });
 
-  const API_URL = 'http://localhost:5000/tasks';
+  const API_URL = 'http://localhost:5000/tasks'; // API endpoint for tasks
 
-  // Fetch all tasks
+  // Fetch all tasks from the server when the component mounts
   useEffect(() => {
     axios.get(API_URL)
       .then((res) => {
@@ -23,37 +24,37 @@ const App = () => {
       .catch((error) => console.error('Error fetching tasks:', error));
   }, []);
 
-  // Add a new task
+  // Function to add a new task
   const addTask = () => {
     console.log('Adding task:', newTask);
     axios.post(API_URL, newTask)
       .then((res) => {
         console.log('Task added:', res.data);
-        setTasks([...tasks, res.data]);
-        setNewTask({ title: '', description: '', status: 'Pending' });
+        setTasks([...tasks, res.data]); // Update the tasks state with the new task
+        setNewTask({ title: '', description: '', status: 'Pending' }); // Reset the new task form
       })
       .catch((error) => console.error('Error adding task:', error));
   };
 
-  // Update task
+  // Function to update an existing task
   const updateTask = (id, updatedTask) => {
     console.log('Updating task:', id, updatedTask);
     axios.put(`${API_URL}/${id}`, updatedTask)
       .then((res) => {
         console.log('Task updated:', res.data);
-        setTasks(tasks.map((task) => (task.id === id ? res.data : task)));
-        setEditingTaskId(null);
+        setTasks(tasks.map((task) => (task.id === id ? res.data : task))); // Update the task in the state
+        setEditingTaskId(null); // Exit editing mode
       })
       .catch((error) => console.error('Error updating task:', error));
   };
 
-  // Delete a task
+  // Function to delete a task
   const deleteTask = (id) => {
     console.log('Deleting task:', id);
     axios.delete(`${API_URL}/${id}`)
       .then(() => {
         console.log('Task deleted:', id);
-        setTasks(tasks.filter((task) => task.id !== id));
+        setTasks(tasks.filter((task) => task.id !== id)); // Remove the task from the state
       })
       .catch((error) => console.error('Error deleting task:', error));
   };
