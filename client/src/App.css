@@ -1,0 +1,143 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.app-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.prompt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.prompt input,
+.prompt select,
+.prompt button {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.prompt button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.prompt button:hover {
+  background-color: #45a049;
+}
+
+.sticky-note {
+  background-color: #f3e7b4; /* Grey background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 20px auto;
+  width: 300px;
+  max-width: 100%;
+  word-wrap: break-word;
+  text-align: left; /* Ensure text is left-aligned */
+  overflow: hidden; /* Prevent overflow */
+  overflow-wrap: break-word; /* Ensure text wraps within the container */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 0;
+}
+
+.task-title {
+  display: flex;
+  align-items: center;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 34px; /* Align with bullet point */
+  word-wrap: break-word; /* Ensure text wraps within the container */
+  overflow-wrap: break-word; /* Ensure text wraps within the container */
+  width: 100%; /* Ensure it takes the full width of the parent container */
+  max-width: 100%; /* Ensure it does not exceed the parent container's width */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  white-space: normal; /* Allow text to wrap */
+}
+
+.task-bullet {
+  margin-left: 0;
+  margin-right: 10px;
+  font-size: 24px;
+  color: #000;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+}
+
+.task-actions select {
+  margin-right: 10px;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f44336;
+}
+
+.delete-button:hover {
+  color: #d32f2f;
+}
