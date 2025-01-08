@@ -1,39 +1,46 @@
+/* Main App container styling */
 .App {
   text-align: center;
 }
 
+/* Styling for the logo */
 .App-logo {
   height: 40vmin;
-  pointer-events: none;
+  pointer-events: none; /* Disable pointer events on the logo */
 }
 
+/* Animation for the logo, only when motion preference is not reduced */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* Header styling */
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100vh; /* Full viewport height */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin); /* Responsive font size */
   color: white;
 }
 
+/* Main container for the App */
 .app-container {
   padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif; /* Font family for the app */
 }
 
+/* Styling for the main heading */
 h1 {
   text-align: center;
   margin-bottom: 20px;
 }
 
+/* Styling for the prompt section (input fields and button) */
 .prompt {
   display: flex;
   justify-content: center;
@@ -42,6 +49,7 @@ h1 {
   margin-bottom: 20px;
 }
 
+/* Common styling for inputs, select dropdowns, and buttons in the prompt section */
 .prompt input,
 .prompt select,
 .prompt button {
@@ -50,36 +58,41 @@ h1 {
   border-radius: 5px;
 }
 
+/* Specific styling for the add task button */
 .prompt button {
-  background-color: #4caf50;
-  color: white;
+  background-color: #4caf50; /* Green background */
+  color: white; /* White text */
   border: none;
   cursor: pointer;
 }
 
+/* Hover effect for the add task button */
 .prompt button:hover {
   background-color: #45a049;
 }
 
+/* Styling for the sticky note container */
 .sticky-note {
   background-color: #f3e7b4; /* Grey background */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
   margin: 0 auto 20px auto;
   width: 300px;
   max-width: 100%;
-  word-wrap: break-word;
+  word-wrap: break-word; /* Ensure text wraps within the container */
   text-align: left; /* Ensure text is left-aligned */
   overflow: hidden; /* Prevent overflow */
   overflow-wrap: break-word; /* Ensure text wraps within the container */
 }
 
+/* Remove default list styling */
 ul {
   list-style-type: none;
   padding: 0;
 }
 
+/* Styling for individual task items */
 .task-item {
   display: flex;
   flex-direction: column;
@@ -89,19 +102,22 @@ ul {
   margin-bottom: 10px;
 }
 
+/* Header section of each task item */
 .task-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; /* Space out the elements */
   width: 100%;
   padding-left: 0;
 }
 
+/* Title section of each task item */
 .task-title {
   display: flex;
   align-items: center;
 }
 
+/* Content section of each task item */
 .task-content {
   display: flex;
   flex-direction: column;
@@ -115,6 +131,7 @@ ul {
   white-space: normal; /* Allow text to wrap */
 }
 
+/* Styling for the bullet point of each task item */
 .task-bullet {
   margin-left: 0;
   margin-right: 10px;
@@ -122,22 +139,26 @@ ul {
   color: #000;
 }
 
+/* Actions section of each task item */
 .task-actions {
   display: flex;
   align-items: center;
 }
 
+/* Margin for the select dropdown in the task actions */
 .task-actions select {
   margin-right: 10px;
 }
 
+/* Styling for the delete button */
 .delete-button {
   background: none;
   border: none;
   cursor: pointer;
-  color: #f44336;
+  color: #f44336; /* Red color */
 }
 
+/* Hover effect for the delete button */
 .delete-button:hover {
-  color: #d32f2f;
+  color: #d32f2f; /* Darker red */
 }
