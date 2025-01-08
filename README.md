@@ -70,8 +70,8 @@ To run the application locally, follow these steps:
 3. Start the client:
     ```bash
     npm start
+    * If prompted to open in a new port, click yes*
     ```
-
 This will start the development server and you can view the app in your browser at [http://localhost:3000](http://localhost:3000).
 
 ## License
